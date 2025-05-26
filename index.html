@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalkulator persamaan serentak 🎀</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>kalkulator persamaan serentak (๑•ᴗ•๑)</h1>
+        
+        <div class="equation-type-buttons">
+            <button onclick="showEquationType('linear')">📈 linear</button>
+            <button onclick="showEquationType('non-linear')">📉 non-linear</button>
+        </div>
+
+        <!-- Linear Equations -->
+        <div id="linear-equations">
+            <div class="input-group">
+                <input type="number" id="l1x" placeholder="x">
+                <input type="number" id="l1y" placeholder="y">
+                <span>＝</span>
+                <input type="number" id="l1c" placeholder="konstanta">
+            </div>
+            <div class="input-group">
+                <input type="number" id="l2x" placeholder="x">
+                <input type="number" id="l2y" placeholder="y">
+                <span>＝</span>
+                <input type="number" id="l2c" placeholder="konstanta">
+            </div>
+            <button onclick="solveLinear()">hitung linear</button>
+        </div>
+
+        <!-- Non-Linear Equations -->
+        <div id="non-linear-equations" style="display:none">
+            <div class="input-group non-linear-input">
+                <input type="number" id="nl1x2" placeholder="x²">
+                <input type="number" id="nl1x" placeholder="x">
+                <input type="number" id="nl1y" placeholder="y">
+                <span>＝</span>
+                <input type="number" id="nl1c" placeholder="konstanta">
+            </div>
+            <div class="input-group">
+                <input type="number" id="nl2x" placeholder="x">
+                <input type="number" id="nl2y" placeholder="y">
+                <span>＝</span>
+                <input type="number" id="nl2c" placeholder="konstanta">
+            </div>
+            <button onclick="solveNonLinear()">🧮 Hitung Non-Linear</button>
+        </div>
+
+        <div id="result" class="result-box"></div>
+
+        <div class="bottom-gif">
+            <img src="https://i.pinimg.com/originals/8d/89/a5/8d89a5c91c2933c9717b5bb22a14aa7a.gif" alt="cute gif">
+        </div>
+    </div>
+
+    <div class="copyright">
+        ( was made to fulfill the linear algebra and matrix course assignments, nadhifa fitriyah )
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
