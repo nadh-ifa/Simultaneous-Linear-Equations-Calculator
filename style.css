@@ -1,161 +1,45 @@
+/* style.css */
+/* Styling dasar halaman */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #fdf9ec;
+    font-family: 'Poppins', sans-serif; // Gunakan font Poppins
+    background: #fdf9ec; // Warna latar belakang pastel
     margin: 0;
     padding: 20px;
-    min-height: 100vh;
-    background-size: 60px 60px;
-    background-position: 0 0, 30px 30px;
 }
 
+/* Kontainer utama */
 .container {
-    max-width: 1000px;
-    margin: 20px auto;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 30px;
-    box-shadow: 0 0 30px rgba(255, 105, 180, 0.2);
-    backdrop-filter: blur(5px);
-    border: 3px solid #f39fb3;
+    max-width: 1000px; // Lebar maksimum
+    margin: 20px auto; // Posisi tengah
+    background: rgba(255, 255, 255, 0.9); // Latar transparan
+    border-radius: 30px; // Sudut melengkung
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.2); // Bayangan pink
 }
 
-h1 {
-    color: #fb88aa;
-    text-align: center;
-    font-size: 2.8em;
-    margin: 20px 0;
-    position: relative;
-}
-
-h1::after {
-    content: '';
-    position: absolute;
-    right: 10%;
-    top: -10px;
-    font-size: 1.5em;
-}
-
-.equation-type-buttons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
-    justify-content: center;
-}
-
+/* Styling tombol */
 button {
-    background: linear-gradient(45deg, #f39fb3, #f39fb3);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 20px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: all 0.3s;
-    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    background: linear-gradient(45deg, #f39fb3, #f39fb3); // Gradien warna
+    padding: 15px 30px; 
+    border-radius: 20px; // Bentuk pill
+    transition: all 0.3s; // Animasi hover
 }
 
-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.5);
-}
-
-button:active {
-    transform: translateY(0);
-}
-
-.input-group {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    margin-bottom: 20px;
-    align-items: center;
-    padding: 15px;
-    background: #fff5f9;
-    border-radius: 15px;
-    border: 2px dashed #f39fb3;
-}
-
-.non-linear-input {
-    grid-template-columns: repeat(5, 1fr);
-}
-
+/* Input fields */
 input {
-    padding: 12px;
-    border: 2px solid #ffb3d9;
-    border-radius: 12px;
-    font-size: 1em;
-    transition: all 0.3s;
-    background: #fff0f5;
+    border: 2px solid #ffb3d9; // Border warna pink muda
+    background: #fff0f5; // Latar input
+    border-radius: 12px; // Sudut melengkung
 }
 
-input:focus {
-    outline: none;
-    border-color: #f39fb3;
-    box-shadow: 0 0 8px rgba(255, 105, 180, 0.3);
-}
-
+/* Kotak hasil */
 .result-box {
     background: #fff0f5;
-    padding: 25px;
-    border-radius: 20px;
-    margin-top: 30px;
     border: 3px solid #f39fb3;
-    position: relative;
-    animation: fadeIn 0.5s ease-in;
+    animation: fadeIn 0.5s ease-in; // Animasi muncul
 }
 
-.result-box::before {
-    content: '';
-    position: absolute;
-    left: -15px;
-    top: -15px;
-    font-size: 1.5em;
-}
-
+/* Animasi fade-in */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-.steps {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 20px;
-    box-shadow: 0 2px 10px rgba(255, 105, 180, 0.1);
-}
-
-.steps p {
-    padding: 10px;
-    background: #fff5f9;
-    border-radius: 8px;
-    margin: 10px 0;
-}
-
-.emoji {
-    font-size: 1.5em;
-    margin-right: 10px;
-}
-
-.bottom-gif {
-    text-align: center;
-    margin-top: 30px;
-    padding: 10px;
-}
-
-.bottom-gif img {
-    width: 85px;
-    height: auto;
-    opacity: 0.7;
-}
-
-.copyright {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.0em;
-    color: #888;
-    font-weight: 400;
 }
